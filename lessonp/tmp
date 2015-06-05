@@ -1,0 +1,172 @@
+#include "stdio.h"
+int main()
+{ int i; 
+char m; 
+
+printf(" ‰»Î i:"); 
+scanf("\n%d",&i); 
+
+printf(" ‰»Î m:"); 
+scanf("\n%s",&m); 
+printf(" %d\n",i); 
+printf(" %s\n",m); 
+return 0;
+}
+
+/*#include <stdio.h>
+
+int main()
+{
+    char string[50];
+    scanf("%[^/n]",string);
+    printf("%s/n",string);
+    return 0;
+}*/
+
+
+/*#include <stdio.h>
+
+int main()
+{
+    int x,y,z,w;
+	scanf("%4d-%3d-%2d-%1d",&x,&y,&z,&w);
+    printf("%4d+%3d+%2d+%1d\n",x,y,z,w);
+    return 0;
+}
+/*scanf()
+#include <stdio.h>   
+#include <conio.h>   
+int main(void)   
+{   
+	char label[20];   
+	char name[20];   
+	int entries = 0;   
+	int loop, age;   
+	double salary;   
+	struct Entry_struct   
+	{   
+		char  name[20];   
+		int   age;   
+		float salary;   
+	} entry[20];   
+	/* Input a label as a string of characters restricting to 20 characters */   
+	/*printf("\n\nPlease enter a label for the chart: ");   
+	scanf("%20s", label);   
+	fflush(stdin);  /* flush the input stream in case of bad input */   
+	/* Input number of entries as an integer */  
+	printf("How many entries will there be? (less than 20) ");   
+	scanf("%d", &entries);   
+	fflush(stdin);   /* flush the input stream in case of bad input */   
+	/* input a name restricting input to only letters upper or lower case */   
+	for (loop=0;loop<entries;++loop)   
+	{   
+		printf("Entry %d\n", loop);   
+		printf("  Name   : ");   
+		scanf("%[A-Za-z]", entry[loop].name);   
+		fflush(stdin);  /* flush the input stream in case of bad input */   
+		/* input an age as an integer */   
+		printf("  Age    : ");   
+		scanf("%d", &entry[loop].age);   
+		fflush(stdin);  /* flush the input stream in case of bad input */   
+		/* input a salary as a float */   
+		printf("  Salary : ");   
+		scanf("%f", &entry[loop].salary);   
+		fflush(stdin); /* flush the input stream in case of bad input */   
+	}   
+	/* Input a name, age and salary as a string, integer, and double */   
+	printf("\nPlease enter your name, age and salary\n");   
+	scanf("%20s %d %lf", name, &age, &salary);   
+	/* Print out the data that was input */ 
+	printf("\n\nTable %s\n",label);   
+	printf("Compiled by %s  age %d  $%15.2lf\n", name, age, salary);   
+	printf("-----------------------------------------------------\n");   
+	for (loop=0;loop<entries;++loop)   
+		printf("%4d | %-20s | %5d | %15.2lf\n",   
+		loop + 1,   
+		entry[loop].name,   
+		entry[loop].age,   
+		entry[loop].salary);   
+	printf("-----------------------------------------------------\n");   
+	return 0;   
+} 
+
+/*printf()
+#include <stdio.h>   
+#include <string.h>   
+#define I 555   
+#define R 5.5   
+int main(void)   
+{   
+	int i,j,k,l;   
+	char buf[7];   
+	char *prefix = buf;   
+	char tp[20];   
+	printf("prefix  6d      6o      8x        10.2e        "   
+		"10.2f\n");   
+	strcpy(prefix,"%");   
+	for (i = 0; i < 2; i++)   
+	{   
+		for (j = 0; j < 2; j++)   
+			for (k = 0; k < 2; k++)   
+				for (l = 0; l < 2; l++)   
+				{   
+					if (i==0)  strcat(prefix,"-");   
+					if (j==0)  strcat(prefix,"+");   
+					if (k==0)  strcat(prefix,"#");   
+					if (l==0)  strcat(prefix,"0");   
+					printf("%5s |",prefix);   
+					strcpy(tp,prefix);   
+					strcat(tp,"6d |");   
+					printf(tp,I);   
+					strcpy(tp,"");   
+					strcpy(tp,prefix);   
+					strcat(tp,"6o |");   
+					printf(tp,I);   
+					strcpy(tp,"");   
+					strcpy(tp,prefix);   
+					strcat(tp,"8x |");   
+					printf(tp,I);   
+					strcpy(tp,"");   
+					strcpy(tp,prefix);   
+					strcat(tp,"10.2e |"); 
+					printf(tp,R);   
+					strcpy(tp,prefix);   
+					strcat(tp,"10.2f |");   
+					printf(tp,R);   
+					printf("  \n");   
+					strcpy(prefix,"%");   
+				}   
+	}   
+	return 0;   
+} 
+
+/*int main()
+{
+int a;
+long int b;
+unsigned int c;
+float d;
+double e;
+long double f;
+char s[100];
+scanf("%d", &a);   // store an int
+scanf(" %d", &a);  // eat any whitespace, then store an int
+scanf("%s", s);    // store a string
+scanf("%Lf", &f);  // store a long double
+// store an unsigned, read all whitespace, then store a long int:
+scanf("%u %ld", &c, &b);
+// store an int, read whitespace, read "blendo", read whitespace,
+// and store a float:
+scanf("%d blendo %f", &a, &d);
+// read all whitespace, then store all characters up to a newline
+scanf(" %[^\n]", s);
+// store a float, read (and ignore) an int, then store a double:
+scanf("%f %*d %lf", &d, &e);
+// store 10 characters:
+scanf("%10c", s);
+return 0;
+}*/
+
+
+
+
