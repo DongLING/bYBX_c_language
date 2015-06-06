@@ -1,2 +1,5 @@
 # Ignore *.out
 *.out
+
+# Ignore *~
+*~
