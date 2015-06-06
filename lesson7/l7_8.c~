@@ -1,0 +1,44 @@
+/*------------------------------------------------------------------
+ 程序L7_8.C : 统计2个学生成绩。其中长整型数组num[2]存放学生的学号，
+ 二维数组score[2][3]存放学生成绩，即第i个学生的英语成绩为score[i][0]、
+ 数学成绩为score[i][1]和语文成绩为score[i][2]，aver[2]存放学生的平均成绩
+ -------------------------------------------------------------------------*/
+ #include <stdio.h>
+
+/*输入n个学生学号和各课成绩，并计算平均分*/
+void input(long num[], int score[][3],float aver[],int n)
+{int i,j;
+for (i=0;i<n;i++)
+  {  printf("学号为：");
+     scanf("%ld",&num[i]);
+     printf("\n各科成绩英语 高数 计算机为：\n");
+     aver[i]=0;
+     for (j=0;j<3;j++)
+       { scanf("%d",&score[i][j]);
+	      aver[i]+=score[i][j];
+       }
+     aver[i]/=3;
+     }
+}
+
+/*输出结果*/
+void output(long num[], int score[][3],float aver[],int n)
+{ int i,j;
+  printf("    学号 英语 高数 计算机 平均分\n");
+  for (i=0;i<n;i++)
+    { printf ("%8ld",num[i]);
+      for (j=0;j<3;j++)
+	      printf("%5d",score[i][j]);
+      printf("%8.1f",aver[i]);
+      printf("\n");
+      } 
+ }
+
+ void main( )
+ { long num[2];  /*以2个学生为例*/
+   int score[2][3];
+   float aver[2];
+   input(num,score,aver,2);
+   output(num,score,aver,2);
+   }
+
